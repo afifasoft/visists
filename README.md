@@ -38,4 +38,6 @@ on-failure
     #Only restart if the container stops with an error code
 unless-stopped
     #Always restart unless we(the developers) forcibly stop it
-    
+
+#Container status
+docker-compose ps
