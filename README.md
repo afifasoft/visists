@@ -27,3 +27,15 @@ docker-compose up -d
 
 #Stop containers
 docker-compose down
+
+#Restart Policies
+"no"
+    #we will put quots in no only either double or single because in yml file no means false
+    #Never attempt to restart this. container if it stops or crashes
+always
+    #If this container stops *for any reason* always attempt to restart it
+on-failure
+    #Only restart if the container stops with an error code
+unless-stopped
+    #Always restart unless we(the developers) forcibly stop it
+    
